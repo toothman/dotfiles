@@ -1,0 +1,9 @@
+ssh () {
+	cat ~/.ssh/configs/* > ~/.ssh/config
+	/usr/bin/ssh "$@"
+}
+
+alias update-arch="sudo pacman -Syu"
+alias update-aur="yaourt -Su --aur"
+alias restart-plasma="killall plasmashell & kstart plasmashell"
+alias cleanup-arch="sudo pacman -R $(pacman -Qdtq)"
