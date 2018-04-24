@@ -85,7 +85,17 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/.alias
 
+source "/usr/share/fzf/key-bindings.zsh"
+
 export VISUAL=vim
 export EDITOR=$VISUAL
 
-export PATH=$PATH:bin:~/.config/composer/vendor/bin:$(ruby -rubygems -e "puts Gem.user_dir")/bin
+export PATH=~/.composer/vendor/bin:$PATH
+export PATH=bin/:$PATH
+
+export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+export GEM_HOME=$HOME/.gem
+
+if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
+  exec startx
+fi
