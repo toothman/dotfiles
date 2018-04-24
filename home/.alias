@@ -5,5 +5,13 @@ ssh () {
 
 alias update-arch="sudo pacman -Syu"
 alias update-aur="yaourt -Su --aur"
-alias restart-plasma="killall plasmashell & kstart plasmashell"
 alias cleanup-arch="sudo pacman -R $(pacman -Qdtq)"
+
+alias vim="nvim"
+alias vi="nvim"
+alias oldvim="vim"
+
+alias mess-check='f() {/usr/bin/phpmd "$@" text unusedcode,design,codesize --exclude Tests}; f'
+alias code-sniff='f() {/usr/bin/phpcs --standard=PSR2 --ignore=Tests "$@"}; f'
+
+alias display-config='f() {~/dotfiles/screen/"$@".sh}; f'
