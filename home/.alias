@@ -15,3 +15,6 @@ alias mess-check='f() {/usr/bin/phpmd "$@" text unusedcode,design,codesize --exc
 alias code-sniff='f() {/usr/bin/phpcs --standard=PSR2 --ignore=Tests "$@"}; f'
 
 alias display-config='f() {~/dotfiles/screen/"$@".sh}; f'
+
+# Shortcut for docker-compose (autosearch docker-compose.yml in up-dir, you don't have to be in directory with docker-compose.yml)
+alias dcc='docker-compose'
